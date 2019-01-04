@@ -15,6 +15,11 @@ namespace Updater
         string exePath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\";
         bool errorState = false;
 
+        string appName = "Crypto Notepad.exe";
+        string zipName = "Crypto-Notepad-Update.zip";
+        string updateDownloadPath = "https://raw.githubusercontent.com/Crypto-Notepad/Crypto-Notepad/master/Crypto-Notepad-Update.zip";
+        string releaseNotesLink = "https://github.com/Crypto-Notepad/Crypto-Notepad/wiki/Release-Notes";
+
         public UpdateForm(string[] args)
         {
             arg = args;
@@ -43,8 +48,8 @@ namespace Updater
             if (e.Error == null)
             {
                 var pr = new Process();
-                ExtractFileToDirectory(exePath + "Crypto-Notepad-Update.zip", exePath);
-                pr.StartInfo.FileName = exePath + "Crypto Notepad.exe";
+                ExtractFileToDirectory(exePath + zipName, exePath);
+                pr.StartInfo.FileName = exePath + appName;
                 pr.Start();
                 Application.Exit();
             }
@@ -71,13 +76,13 @@ namespace Updater
                 OkButton.Enabled = false;
                 WebClient webClient = new WebClient();
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(downloader_DownloadFileCompleted);
-                webClient.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/Crypto-Notepad/Crypto-Notepad/master/Crypto-Notepad-Update.zip"), exePath + "Crypto-Notepad-Update.zip");
+                webClient.DownloadFileAsync(new Uri(updateDownloadPath), exePath + zipName);
             }
 
             if (errorState == true)
             {
                 var pr = new Process();
-                pr.StartInfo.FileName = exePath + "Crypto Notepad.exe";
+                pr.StartInfo.FileName = exePath + appName;
                 pr.Start();
                 Application.Exit();
             }
@@ -85,7 +90,7 @@ namespace Updater
 
         private void RlsNotesLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/Crypto-Notepad/Crypto-Notepad/wiki/Release-Notes");
+            Process.Start(releaseNotesLink);
         }
     }
 }
