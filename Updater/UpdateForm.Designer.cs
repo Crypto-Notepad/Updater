@@ -70,17 +70,18 @@
             this.pictureBox1.TabIndex = 0;
             this.updaterPictureBox.TabStop = false;
             // 
-            // OkButton
+            // updateButton
             // 
-            this.OkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OkButton.Location = new System.Drawing.Point(214, 79);
-            this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 5;
-            this.OkButton.Text = "OK";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.updateButton.Enabled = false;
+            this.updateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.updateButton.Location = new System.Drawing.Point(214, 79);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 1;
             this.updateButton.TabStop = false;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // releaseNotesLabel
             // 
@@ -113,31 +114,31 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 107);
-            this.Controls.Add(this.RlsNotesLinkLabel);
-            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.releaseNotesLabel);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UpdateForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Crypto Notepad Updater";
+            this.Text = "Updater";
             this.Load += new System.EventHandler(this.UpdateForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updaterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.PictureBox updaterPictureBox;
         private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel RlsNotesLinkLabel;
+        private System.Windows.Forms.LinkLabel releaseNotesLabel;
         private System.Windows.Forms.Timer isAppRunningTimer;
     }
 }

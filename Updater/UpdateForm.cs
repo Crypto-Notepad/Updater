@@ -42,7 +42,7 @@ namespace Updater
             {
                 System.Media.SystemSounds.Beep.Play();
                 errorState = true;
-                OkButton.Enabled = true;
+                updateButton.Enabled = true;
                 descriptionLabel.Text = "There was some errors during the update, please try again later.";
             }
 
@@ -75,7 +75,7 @@ namespace Updater
             }
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
             isAppRunningTimer.Stop();
             if (errorState == false)
