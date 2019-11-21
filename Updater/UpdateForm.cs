@@ -24,6 +24,7 @@ namespace Updater
         {
             arg = args;
             InitializeComponent();
+            releaseNotesLabel.TabStop = false;
         }
 
         #region ExtractZip

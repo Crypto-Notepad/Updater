@@ -66,7 +66,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.updaterPictureBox.TabStop = false;
             // 
             // OkButton
             // 
@@ -78,6 +78,7 @@
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.updateButton.TabStop = false;
             // 
             // RlsNotesLinkLabel
             // 
@@ -88,7 +89,6 @@
             this.RlsNotesLinkLabel.Name = "RlsNotesLinkLabel";
             this.RlsNotesLinkLabel.Size = new System.Drawing.Size(110, 15);
             this.RlsNotesLinkLabel.TabIndex = 6;
-            this.RlsNotesLinkLabel.TabStop = true;
             this.RlsNotesLinkLabel.Text = "View release notes";
             this.RlsNotesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RlsNotesLinkLabel_LinkClicked);
             // isAppRunningTimer
