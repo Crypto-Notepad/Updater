@@ -1,11 +1,12 @@
-﻿using System;
-using Ionic.Zip;
-using System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
+﻿using Ionic.Zip;
+using System;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Reflection;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Updater
 {
