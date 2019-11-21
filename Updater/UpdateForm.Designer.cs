@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.descriptionLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OkButton = new System.Windows.Forms.Button();
@@ -38,20 +39,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // descriptionLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(69, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 60);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Application will be updated and reopened.";
+            this.descriptionLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.Location = new System.Drawing.Point(69, 6);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(222, 60);
+            this.descriptionLabel.TabIndex = 4;
+            this.descriptionLabel.Text = "Description";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.descriptionLabel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 73);
@@ -80,7 +82,17 @@
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             this.updateButton.TabStop = false;
             // 
-            // RlsNotesLinkLabel
+            // releaseNotesLabel
+            // 
+            this.releaseNotesLabel.AutoSize = true;
+            this.releaseNotesLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.releaseNotesLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.releaseNotesLabel.Location = new System.Drawing.Point(3, 83);
+            this.releaseNotesLabel.Name = "releaseNotesLabel";
+            this.releaseNotesLabel.Size = new System.Drawing.Size(103, 15);
+            this.releaseNotesLabel.TabIndex = 2;
+            this.releaseNotesLabel.Text = "View release notes";
+            this.releaseNotesLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReleaseNotesLabel_LinkClicked);
             // 
             this.RlsNotesLinkLabel.AutoSize = true;
             this.RlsNotesLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -123,6 +135,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel RlsNotesLinkLabel;
         private System.Windows.Forms.Timer isAppRunningTimer;

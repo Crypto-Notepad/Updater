@@ -36,14 +36,14 @@ namespace Updater
         }
         #endregion
 
-        void downloader_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        void Downloader_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             if (e.Error != null)
             {
                 System.Media.SystemSounds.Beep.Play();
                 errorState = true;
                 OkButton.Enabled = true;
-                label1.Text = "There was some errors during the update, please try again later.";
+                descriptionLabel.Text = "There was some errors during the update, please try again later.";
             }
 
             if (e.Error == null)
@@ -90,7 +90,7 @@ namespace Updater
             }
         }
 
-        private void RlsNotesLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ReleaseNotesLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(releaseNotesLink);
         }
