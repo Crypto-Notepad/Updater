@@ -70,6 +70,7 @@ namespace Updater
 
         private void OkButton_Click(object sender, EventArgs e)
         {
+            isAppRunningTimer.Stop();
             if (errorState == false)
             {
                 var pr = new Process();
@@ -91,6 +92,19 @@ namespace Updater
         private void RlsNotesLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(releaseNotesLink);
+        }
+
+        private void IsAppRunningTimer_Tick(object sender, EventArgs e)
+        {
+            Process[] pname = Process.GetProcessesByName(Path.GetFileNameWithoutExtension(appName));
+            if (pname.Length > 0)
+            {
+                updateButton.Enabled = false;
+            }
+            else
+            {
+                updateButton.Enabled = true;
+            }
         }
     }
 }

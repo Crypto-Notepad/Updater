@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OkButton = new System.Windows.Forms.Button();
             this.RlsNotesLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.isAppRunningTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +91,10 @@
             this.RlsNotesLinkLabel.TabStop = true;
             this.RlsNotesLinkLabel.Text = "View release notes";
             this.RlsNotesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RlsNotesLinkLabel_LinkClicked);
+            // isAppRunningTimer
+            // 
+            this.isAppRunningTimer.Enabled = true;
+            this.isAppRunningTimer.Tick += new System.EventHandler(this.IsAppRunningTimer_Tick);
             // 
             // UpdateForm
             // 
@@ -120,6 +125,7 @@
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel RlsNotesLinkLabel;
+        private System.Windows.Forms.Timer isAppRunningTimer;
     }
 }
 
