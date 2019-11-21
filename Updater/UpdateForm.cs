@@ -81,9 +81,9 @@ namespace Updater
             if (errorState == false)
             {
                 var pr = new Process();
-                OkButton.Enabled = false;
+                updateButton.Enabled = false;
                 WebClient webClient = new WebClient();
-                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(downloader_DownloadFileCompleted);
+                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Downloader_DownloadFileCompleted);
                 webClient.DownloadFileAsync(new Uri(updateDownloadPath), exePath + zipName);
             }
 
