@@ -69,7 +69,6 @@ namespace Updater
             {
                 Close();
             }
-
             else if (arg[0] == "/u")
             {
                 return;
@@ -87,7 +86,6 @@ namespace Updater
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Downloader_DownloadFileCompleted);
                 webClient.DownloadFileAsync(new Uri(updateDownloadPath), exePath + zipName);
             }
-
             if (errorState == true)
             {
                 var pr = new Process();
