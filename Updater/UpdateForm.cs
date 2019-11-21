@@ -58,6 +58,12 @@ namespace Updater
 
         private void UpdateForm_Load(object sender, EventArgs e)
         {
+            Text = Path.GetFileNameWithoutExtension(appName) + " Updater";
+            StringBuilder sb = new StringBuilder(string.Empty);
+            sb.AppendLine("1) Close "+ Path.GetFileNameWithoutExtension(appName) +" if it's running.");
+            sb.AppendLine("2) Click Update button.");
+            sb.AppendLine(Path.GetFileNameWithoutExtension(appName) + " will update and run automatically.");
+            descriptionLabel.Text = sb.ToString();
             if (arg.Length == 0)
             {
                 Close();
