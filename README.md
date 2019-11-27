@@ -4,7 +4,7 @@ This app was created for Crypto Notepad, but can be used in any C# project. This
 # How to use
 Here is some code explanations:
 * Enter your values for these variables.
-* Build project, and place `Updater.exe` files to resources of project what you want to update.
+* Build the project binaries, and place `Updater.exe` to resources of project, that you want to update.
 
 ```csharp
 string appName = "Crypto Notepad.exe";
