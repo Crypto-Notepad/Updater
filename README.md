@@ -1,5 +1,5 @@
 # Updater
-This app was created for Crypto Notepad, but can be used in any C# project. This app just downloading archive with update files from server, and unzip this archive.
+This app was created for Crypto Notepad, but can be used in any C# project. This app just download archive with update files from server, and unzip this archive.
 
 # How to use
 Here is some code explanations:
