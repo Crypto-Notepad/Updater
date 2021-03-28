@@ -77,6 +77,7 @@ namespace Updater
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             isAppRunningTimer.Stop();
             if (errorState == false)
             {
